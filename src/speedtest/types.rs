@@ -84,7 +84,7 @@ pub struct UploadRecord {
     counter: Option<u64>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Serialize, Deserialize)]
 pub struct ResultRecord {
     timestamp: DateTime<Utc>,
 
@@ -97,6 +97,19 @@ pub struct ResultRecord {
 
     #[serde(rename(deserialize = "result"))]
     details: ResultDetails,
+}
+
+impl Debug for ResultRecord {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(
+            f,
+            "date={:?}, ping={:.2} ms, download={:.2} Mbps, upload={:.2} Mbps",
+            self.timestamp,
+            self.ping.latency,
+            self.download.bandwidth as f64 / 125000.0,
+            self.upload.bandwidth as f64 / 125000.0
+        )
+    }
 }
 
 #[derive(Debug, Serialize, Deserialize)]

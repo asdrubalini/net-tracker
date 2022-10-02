@@ -6,7 +6,7 @@ use std::{
 
 use thiserror::Error;
 
-use self::types::{Records, Record};
+use self::types::{Record, Records};
 
 pub mod types;
 
@@ -48,10 +48,7 @@ impl Speedtest {
 
             // debug
             match &record {
-                Ok(record) => println!(
-                    "[speedtest] got record from speedtest of type {}",
-                    record.get_type()
-                ),
+                Ok(_) => (),
                 Err(error) => println!("[speedtest] got error from speedtest: {:?}", error),
             }
 
@@ -61,6 +58,10 @@ impl Speedtest {
         let records: Result<Vec<Record>, Error> = records.collect();
         let records_vec: Vec<Record> = records?;
 
-        Records::try_from(records_vec)
+        let records = Records::try_from(records_vec)?;
+
+        println!("[speedtest] got result: {:?}", records.result);
+
+        Ok(records)
     }
 }

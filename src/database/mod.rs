@@ -1,13 +1,17 @@
 use std::path::Path;
 
+use crossbeam::channel::{unbounded, Receiver, Sender};
 use rusqlite::{params, Connection, Error};
 
 use crate::speedtest::types::{Records, StartRecord};
 
-pub struct Database(Connection);
+pub struct DatabaseWorker {
+    connection: Connection,
+    rx: Receiver<Records>,
+}
 
-impl Database {
-    pub fn new() -> Result<Self, Error> {
+impl DatabaseWorker {
+    pub fn new() -> Result<(Self, DatabaseHandle), Error> {
         let path = Path::new("./results.db");
         let needs_init = !path.exists();
 
@@ -18,10 +22,23 @@ impl Database {
             connection.execute_batch(include_str!("./schema.sql"))?;
         }
 
-        Ok(Self(connection))
+        let (tx, rx) = unbounded();
+
+        let worker = Self { connection, rx };
+        let handle = DatabaseHandle { tx };
+
+        Ok((worker, handle))
     }
 
-    pub fn insert_records(&self, records: Records) -> Result<(), Error> {
+    pub fn run(self) {
+        loop {
+            while let Ok(records) = self.rx.recv() {
+                self.insert_records(records).unwrap();
+            }
+        }
+    }
+
+    fn insert_records(&self, records: Records) -> Result<(), Error> {
         let measurement_id = self.insert_measurement(&records.start)?;
 
         self.insert_record(
@@ -64,7 +81,7 @@ impl Database {
     }
 
     fn insert_measurement(&self, start_record: &StartRecord) -> Result<u64, Error> {
-        let mut stmt = self.0.prepare("INSERT INTO measurements (timestamp, server_json) VALUES (?1, ?2) RETURNING measurement_id")?;
+        let mut stmt = self.connection.prepare("INSERT INTO measurements (timestamp, server_json) VALUES (?1, ?2) RETURNING measurement_id")?;
         let mut row_iter = stmt.query_map(
             params![
                 start_record.timestamp,
@@ -83,11 +100,22 @@ impl Database {
         record_type: &'static str,
         record_json: String,
     ) -> Result<(), Error> {
-        self.0.execute(
+        self.connection.execute(
             "INSERT INTO records (measurement_id, type, details_json) VALUES (?1, ?2, ?3)",
             params![measurement_id, record_type, record_json],
         )?;
 
         Ok(())
+    }
+}
+
+#[derive(Clone)]
+pub struct DatabaseHandle {
+    tx: Sender<Records>,
+}
+
+impl DatabaseHandle {
+    pub fn insert_records(&self, records: Records) {
+        self.tx.send(records).unwrap();
     }
 }
