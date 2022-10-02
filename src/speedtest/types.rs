@@ -6,22 +6,35 @@ use serde::{Deserialize, Serialize};
 use crate::speedtest::Error;
 
 #[derive(Debug, Serialize, Deserialize)]
+pub struct ServerDetails {
+    pub id: u64,
+    pub host: String,
+    pub name: String,
+    pub location: String,
+    pub country: String,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
 pub struct StartRecord {
-    timestamp: DateTime<Utc>,
+    pub timestamp: DateTime<Utc>,
+    pub server: ServerDetails,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct PingDetails {
     jitter: f64,
     latency: f64,
+    #[serde(skip_serializing_if = "Option::is_none")]
     progress: Option<f64>,
+    #[serde(skip_serializing_if = "Option::is_none")]
     low: Option<f64>,
+    #[serde(skip_serializing_if = "Option::is_none")]
     high: Option<f64>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct PingRecord {
-    timestamp: Option<DateTime<Utc>>,
+    timestamp: DateTime<Utc>,
 
     ping: PingDetails,
 
@@ -32,8 +45,11 @@ pub struct PingRecord {
 #[derive(Debug, Serialize, Deserialize)]
 pub struct LatencyLoadedRecord {
     iqm: f64,
+    #[serde(skip_serializing_if = "Option::is_none")]
     low: Option<f64>,
+    #[serde(skip_serializing_if = "Option::is_none")]
     high: Option<f64>,
+    #[serde(skip_serializing_if = "Option::is_none")]
     jitter: Option<f64>,
 }
 
@@ -42,13 +58,15 @@ pub struct BandwidthDetails {
     bandwidth: u64,
     bytes: u64,
     elapsed: u64,
+    #[serde(skip_serializing_if = "Option::is_none")]
     progress: Option<f64>,
+    #[serde(skip_serializing_if = "Option::is_none")]
     latency: Option<LatencyLoadedRecord>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct DownloadRecord {
-    timestamp: Option<DateTime<Utc>>,
+    timestamp: DateTime<Utc>,
 
     download: BandwidthDetails,
 
@@ -58,7 +76,7 @@ pub struct DownloadRecord {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct UploadRecord {
-    timestamp: Option<DateTime<Utc>>,
+    timestamp: DateTime<Utc>,
 
     upload: BandwidthDetails,
 
