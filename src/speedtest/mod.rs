@@ -46,6 +46,7 @@ impl Speedtest {
         let records = reader.lines().filter_map(|line| line.ok()).map(|line| {
             let record = Record::try_from(line.as_str());
 
+            // debug
             match &record {
                 Ok(record) => println!(
                     "[speedtest] got record from speedtest of type {}",

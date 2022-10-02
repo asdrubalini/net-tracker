@@ -156,6 +156,33 @@ impl TryFrom<Vec<Record>> for Records {
             }
         }
 
+        // sort records, remove progress % and set counters
+        ping.sort_by(|a, b| a.ping.progress.partial_cmp(&b.ping.progress).unwrap());
+
+        for (i, elem) in ping.iter_mut().enumerate() {
+            elem.counter = Some(i as u64);
+            elem.ping.progress = None;
+        }
+
+        download.sort_by(|a, b| {
+            a.download
+                .progress
+                .partial_cmp(&b.download.progress)
+                .unwrap()
+        });
+
+        for (i, elem) in download.iter_mut().enumerate() {
+            elem.counter = Some(i as u64);
+            elem.download.progress = None;
+        }
+
+        upload.sort_by(|a, b| a.upload.progress.partial_cmp(&b.upload.progress).unwrap());
+
+        for (i, elem) in upload.iter_mut().enumerate() {
+            elem.counter = Some(i as u64);
+            elem.upload.progress = None;
+        }
+
         if start.is_none() {
             println!("[speedtest] error: no start record");
             return Err(Error::InvalidRecordVec);
