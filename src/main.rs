@@ -2,7 +2,7 @@ use std::{thread, time::Duration};
 
 use net_tracker::{database::DatabaseWorker, speedtest::Speedtest};
 
-const SPEEDTEST_SERVER_ID: [u32; 2] = [4302, 11427];
+const SPEEDTEST_SERVERS: [Speedtest; 2] = [Speedtest::new(4302), Speedtest::new(11427)];
 
 fn main() {
     // database
@@ -13,17 +13,17 @@ fn main() {
     };
 
     loop {
-        for server_id in SPEEDTEST_SERVER_ID {
-            println!("starting test on server {server_id}");
+        for server in SPEEDTEST_SERVERS {
+            println!("starting test on server {server}");
 
-            let server = Speedtest::new(server_id);
-            let records = server.measure().unwrap();
-
-            database_handle.insert_records(records);
+            match server.measure() {
+                Ok(records) => database_handle.insert_records(records),
+                Err(err) => println!("got error from speedtest: {err}"),
+            };
 
             thread::sleep(Duration::from_secs(30));
         }
 
-        thread::sleep(Duration::from_secs(10 * 60));
+        thread::sleep(Duration::from_secs(5 * 60));
     }
 }

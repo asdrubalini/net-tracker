@@ -1,5 +1,5 @@
 use std::{
-    fmt::Debug,
+    fmt::{Debug, Display, Write},
     io::{self, BufRead, BufReader},
     process::{Command, Stdio},
 };
@@ -24,8 +24,14 @@ pub struct Speedtest {
     server_id: u32,
 }
 
+impl Display for Speedtest {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        f.write_fmt(format_args!("server_id: {}", self.server_id))
+    }
+}
+
 impl Speedtest {
-    pub fn new(server_id: u32) -> Self {
+    pub const fn new(server_id: u32) -> Self {
         Self { server_id }
     }
 
