@@ -17,7 +17,7 @@ const SPEEDTEST_SERVERS: [Speedtest; 7] = [
     // Fastweb Milano
     Speedtest::new(7839),
     // Fastweb Roma
-    Speedtest::new(7829),
+    Speedtest::new(7898),
     // Vodafone Praga
     Speedtest::new(49678),
 ];
