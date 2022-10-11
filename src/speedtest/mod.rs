@@ -1,5 +1,5 @@
 use std::{
-    fmt::{Debug, Display, Write},
+    fmt::{Debug, Display},
     io::{self, BufRead, BufReader},
     process::{Command, Stdio},
 };
