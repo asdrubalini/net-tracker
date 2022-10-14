@@ -53,11 +53,12 @@ fn main() {
             println!("starting test on server {server}");
 
             match server.measure() {
-                Ok(records) => database_handle.insert_records(records),
+                Ok(records) => {
+                    database_handle.insert_records(records);
+                    thread::sleep(Duration::from_secs(10));
+                }
                 Err(err) => println!("got error from speedtest: {err}"),
             };
-
-            thread::sleep(Duration::from_secs(10));
         }
 
         let elapsed = start.elapsed();

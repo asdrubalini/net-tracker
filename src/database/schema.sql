@@ -39,6 +39,6 @@ from
 inner join
 	records on measurements.measurement_id = records.measurement_id
 group by
-	records.measurement_id
+	records.measurement_id;
 
 COMMIT;
