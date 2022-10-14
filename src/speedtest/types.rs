@@ -93,7 +93,7 @@ pub struct ResultRecord {
     upload: BandwidthDetails,
 
     #[serde(rename(deserialize = "packetLoss"))]
-    packet_loss: u64,
+    packet_loss: Option<u64>,
 
     #[serde(rename(deserialize = "result"))]
     details: ResultDetails,

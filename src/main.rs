@@ -1,4 +1,6 @@
 use std::{
+    fs::File,
+    io::Write,
     thread::{self},
     time::{Duration, Instant},
 };
@@ -46,6 +48,8 @@ fn main() {
         handle
     };
 
+    let mut working_servers = File::create("./working-servers.txt").unwrap();
+
     loop {
         let start = Instant::now();
         for server_id in SERVERS {
@@ -55,6 +59,13 @@ fn main() {
             match server.measure() {
                 Ok(records) => {
                     database_handle.insert_records(records);
+
+                    working_servers
+                        .write_all(format!("{server_id}\n").as_bytes())
+                        .unwrap_or_else(|e| {
+                            println!("error while writing to file: {e}");
+                        });
+
                     thread::sleep(Duration::from_secs(10));
                 }
                 Err(err) => println!("got error from speedtest: {err}"),
