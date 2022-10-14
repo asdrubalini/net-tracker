@@ -1,0 +1,182 @@
+Abbadia San Salvatore	ADD39 Coding S.r.l.	26941
+Albenga	Rocket Way	5762
+Ancona	NetoIP.com	21160
+Ancona	FASTnet S.p.a	1324
+Anzio	Teleimpianti S.r.l.	28390
+Aprilia	Teleimpianti S.r.l.	31495
+Ardea	Teleimpianti S.r.l.	31501
+Arezzo	Aruba S.p.a	2811
+Arezzo	Coolnetwork	3009
+Arezzo	Speedy.it	28727
+Arezzo	Polo Universitario Aretino	35148
+Ascoli	Piceno ip telecom S.r.l.	20680
+Aulla	WiFi Communication S.r.l.	36716
+Bellinzona	Azienda Multiservizi di Bellinzona	6820
+Bergamo	Planetel	23925
+Biella	MegaWeb	37788
+Biella	MegaWeb	1273
+Bologna	Lepida	2872
+Bologna	TIM S.p.A.	10404
+Bologna	Alida S.r.l.	37898
+Bologna	Lepida	2872
+Bologna	TIM S.p.A.	10404
+Bologna	Alida S.r.l.	37898
+Bra	Elsynet S.r.l.	25857
+Brescia	Intred S.p.A.	12143
+Brescia	Planetel	34118
+Brescia	Servizi Internet	34136
+Brescia	Mynet	32488
+Brescia	Intred S.p.A.	9071
+Brescia	Planetel	12143
+Brescia	Mynet	32488
+Caluso	Sailweb	30583
+Campobasso	Dimensione S.r.l.	9329
+Campobasso	Interfibra	15920
+Caserta	WIBER	18695
+Cesena	Zinca S.r.l.	35124
+Chiaravalle	Wispone S.r.l.	2657
+Cisterna di Latina	Teleimpianti S.r.l.	31496
+Cologno Monzese	Prometeus di Daniela Agro	2567
+Cori	Teleimpianti S.r.l.	31498
+Correggio	NETandWORK S.r.l.	20372
+Empoli	Arcolink by Next.it S.r.l.	9070
+Fermo	GetBy	17447
+Ferrara	STEL S.r.l.	7108
+Fiesso D’artico	3P System S.r.l.	6339
+Firenze	TIM S.p.A.	9636
+Firenze	IVO by D.t.s. S.r.l.	2710
+Firenze	Arcolink by Next.it S.r.l.	22857
+Foligno	S.p.a	3301
+Frosinone	Seeweb	19068
+Gaeta	JUMBO ADSL	20156
+Genova	TIM S.p.A.	38174
+Genova	NEXIM ITALIA	31596
+Grosseto	IVO by D.t.s. S.r.l.	2711
+Grosseto	Arcolink by Next.it S.r.l.	29947
+Ivrea	Sailweb	30790
+Lacchiarella	Milano teleport S.r.l.	29262
+Latina	Panservice	2275
+Latina	Teleimpianti S.r.l.	12799
+Livorno	IVO by D.t.s. S.r.l.	6483
+Livorno	Arcolink by Next.it S.r.l.	18054
+Livorno	IVO by D.t.s. S.r.l.	6483
+Livorno	Arcolink by Next.it S.r.l.	18054
+Locarno	Ticinocom SA	2755
+Lugano	Aqumo® Technologies SA	4620
+Mantova	Mynet	32003
+Massa	Apuacom	10633
+Massa	Arcolink by Next.it S.r.l.	29953
+Massa	IVO by D.t.s. S.r.l.	2864
+Massa	Arcolink by Next.it S.r.l.	29953
+Massa	Apuacom	10633
+Massarosa	Welcomeitalia S.p.A.	5011
+Mendrisio	Mercury Labs SAGL	10492
+Milano	SUPERNAP ITALIA	21846
+Milano	Vodafone IT	4302
+Milano	CWNET	1434
+Milano	KPNQwest Italia S.p.A.	11776
+Milano	TIM S.p.A.	3667
+Milano	Italiaonline Supernap	11675
+Milano	EOLO	3997
+Milano	CDLAN S.r.l.	8211
+Milano	P-Lab	26415
+Milano	GTT.net	24385
+Milano	Optima Italia	20551
+Milano	Linkem S.p.A.	5502
+Milano	Fastweb S.p.A.	7839
+Milano	TIM S.p.A.	3667
+Milano	GTT.net	24385
+Milano	Next.it S.r.l.	29875
+Milano	Seeweb	19177
+Milano	Linkem S.p.A.	5502
+Milano	Fibering S.p.A.	38731
+Milano	Melita	25609
+Milano	Wind Tre	27363
+Milano	Fiber Telecom S.p.A.	25146
+Milano	Nethive S.r.l.	25258
+Milano	WARIAN	21966
+Milano	SIPORTAL S.r.l.	10450
+Milano	Cloudfire	26943
+Milano	NetoIP.com	21272
+Milano	NEXIM ITALIA	31594
+Milano	Uania	33953
+Milano	Softec S.p.A.	34051
+Milano	Alida S.r.l.	24873
+Milano	Planetel	34117
+Milano	KT Solutions Wireless Internet Service Provider	38634
+Milano	Top Stream	38692
+Minturno	LinkWireless.IT	5793
+Montecchio Maggiore	Interplanet S.r.l.	6901
+Nettuno	Teleimpianti S.r.l.	31497
+Padova	Net Global S.r.l.	6065
+Padova	E4A S.r.l.	3103
+Padova	Net Global S.r.l.	6065
+Palazzolo sull’Oglio	Airbeam S.r.l.	26670
+Pastorano	LIBRA S.r.l.	31610
+Perugia	Alida S.r.l.	37785
+Perugia	Top Stream	38619
+Pescara	Connetti.it	26010
+Pescara	Micso	3231
+Pescara	TIM S.p.a.	36728
+Piacenza	Progetto 8 S.r.l.	36930
+Pietra Ligure	WiMe S.r.l.	3384
+Pisa	Arcolink by Next.it S.r.l.	29948
+Pistoia	Arcolink by Next.it S.r.l.	29949
+Priverno	Teleimpianti S.r.l.	31500
+Quarrata	Sirius Technology	8651
+Reggio Emilia	X-Stream	9071
+Reggio Emilia	Cloudfire S.r.l.	25745
+Rimini	Airbit by Aircom Service	31718
+Roma	Wind Tre	29317
+Roma	Alida S.r.l.	24872
+Roma	YDEA S.r.l.	33504
+Roma	YDEA S.r.l.	38147
+Roma	TIM S.p.a.	3243
+Roma	Fastweb S.p.a.	7898
+Roma	AlternatYva S.r.l.	9508
+Roma	Vodafone Italy	11842
+Roma	Unidata	395
+Roma	Warian S.r.l.	14671
+Roma	IRIDEOS	14761
+Roma	Uniconnect	16505
+Roma	Optima Italia	20745
+Roma	Linkem S.p.a.	5463
+Rossano Veneto	Flynet.it	8289
+Rotello	Ari@net S.r.l.	7029
+Sabaudia	Teleimpianti S.r.l.	31499
+San	Cesareo AirMaxItalia.it	6129
+Savona	WiMe S.r.l.	7274
+Scanno	SINET S.r.l.	7769
+Siena	Arcolink by Next.it S.r.l.	29951
+Siena	IVO by D.t.s. S.r.l.	10919
+Sora	Connetta S.r.l.	17277
+Sovizzo	NAVIGO	36654
+Stabio	GOLINE SA	37146
+Terni	Vodafone Italy	30357
+Tivoli	AirMaxItalia	9967
+Torino	TIM S.p.A.	10406
+Trento	TIM S.p.A.	38096
+Varese	InternetONE	999
+Velletri	Teleimpianti S.r.l.	31502
+Venezia	Alida S.r.l.	5762
+Venezia	TIM S.p.A.	11673
+Venezia	Alida S.r.l.	37788
+Venezia	TIM S.p.a.	11673
+Venezia	APV Investimenti S.p.a	20937
+Venezia	4ISP S.r.l.	5914
+Venezia	Alida S.r.l.	37788
+Venezia	APV Investimenti S.p.A.	20937
+Venezia	4ISP S.r.l.	5914
+Verona	Wolnet S.r.l.	3998
+Verona	Mynet	32391
+Verona	Avelia	38037
+Verona	Inteplanet S.r.l.	4826
+Verona	Planetel	34132
+Verona	Wirelessgroup Communications S.r.l.	23323
+Verona	Wolnet S.r.l.	4826
+Verona	Planetel	3998
+Vicenza	Hynet S.r.l.	3679
+Vicenza	Planetel	34133
+Vicenza	IPCompany	34135
+Vigevano	MIKRONET	30460
+Viterbo	IVO by D.t.s. S.r.l.	6484
